@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "./Button"; 
-import "./app.css";
+import Button from "./Button.tsx"; 
+import "./App.css";
 
 interface ImageContentSectionProps {
   image: string;

@@ -1,5 +1,5 @@
-import SocialIcons from "./SocialIcons";
-import "./app.css";
+import SocialIcons from "./SocialIcons.tsx";
+import "./App.css";
 
 const Footer: React.FC = () => {
   return (

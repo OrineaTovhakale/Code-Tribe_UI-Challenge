@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
-import "./app.css";
+import "./App.css";
 
 const SocialIcons: React.FC = () => {
   return (
