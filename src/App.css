@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-family: 'Dancing Script', cursive; /* Applied Dancing Script font */
+  font-size: 1.9rem;
+  font-weight: bolder;
+  color: rgb(0, 38, 61);
+}
+
+/* Links in center (large screens) */
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: rgb(0, 38, 61);
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.navbar-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: gold;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+/* Right section (icons + button) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: rgb(0, 38, 61);
+}
+
+.phone-icon {
+  color: gold;
+}
+
+.navbar-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hamburger menu (hidden by default on large screens) */
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgb(0, 38, 61);
+}
+
+/* Hide mobile icons in large screens */
+.navbar-icons-mobile {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar-links,
+  .navbar-right {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem;
+    gap: 1rem;
+    border-top: 1px solid #ddd;
+    z-index: 1001;
+  }
+
+  .navbar-icons-mobile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* ===== Hero Section (Image with text and button) ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: none; /* Removed max-height to show full image on large screens */
+  overflow: visible; /* Changed to visible to prevent cropping */
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  max-width: 90%;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: lighter;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-paragraph {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-weight: lighter;
+}
+
+.hero-btn {
+  background-color: rgb(0, 38, 61);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== Picture Section (Image with text and button) ===== */
+.picture-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  overflow: hidden;
+  margin-top: 40px; /* Space after CardSection */
+}
+
+.picture-section img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.picture-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Assuming the image has a dark background like the hero */
+  text-align: center;
+  max-width: 90%;
+}
+
+.picture-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold; /* Matches hero-title style */
+}
+
+.picture-btn {
+  background-color: white;
+  color: black;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.picture-btn:hover {
+  background-color: #f0f0f0; /* Light grey hover effect */
+  transform: scale(1.05);
+}
+
+/* ===== Footer Section ===== */
+.footer {
+  background-color: #f8f8f8; /* Light background for contrast */
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.footer-brand-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-tagline {
+  font-size: 0.8rem; /* Small font size */
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.footer-brand {
+  font-family: 'Dancing Script', cursive; /* Applied Dancing Script font */
+  font-size: 1.9rem;
+  font-weight: bolder;
+  color: rgb(0, 38, 61);
+}
+
+.footer-quick-links {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-quick-links h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: rgb(0, 38, 61);
+}
+
+.footer-quick-links ul {
+  list-style: none;
+}
+
+.footer-quick-links li a {
+  text-decoration: none;
+  color: #666;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.footer-quick-links li a:hover {
+  color: rgb(0, 38, 61);
+}
+
+.footer-paragraph {
+  flex: 1;
+  min-width: 200px;
+  margin-right: 40px; /* Added extra space between paragraph and join sections */
+}
+
+.footer-paragraph p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  text-align: left; /* Lines start at the same vertical position */
+}
+
+.footer-join {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-join h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: rgb(0, 38, 61);
+}
+
+.footer-btn {
+  background-color: rgb(0, 38, 61);
+  color: white;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-btn:hover {
+  background-color: rgb(2, 55, 88);
+  transform: scale(1.05);
+}
+
+/* ===== Footer Bottom Section ===== */
+.footer-bottom {
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  font-size: 1.2rem;
+  color: #666;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  color: rgb(0, 38, 61);
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .hero {
+    max-height: 600px; /* Restore max-height for mobile to prevent excessive height */
+    overflow: hidden;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-paragraph {
+    margin-right: 0; /* Remove extra margin on mobile */
+    margin-bottom: 20px; /* Add vertical space instead */
+  }
+
+  .footer-paragraph p {
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-copyright,
+  .footer-social {
+    text-align: center;
+  }
+}
