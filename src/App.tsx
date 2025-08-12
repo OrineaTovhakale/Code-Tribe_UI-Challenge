@@ -5,7 +5,7 @@ import CardSection from "./CardSection";
 import pictureImage from "./assets/image4.png";
 import ImageContentSection from "./ImageContentSection";
 import Footer from "./Footer";
-import "./app.css";
+import "./App.css";
 
 function App() {
   return (
