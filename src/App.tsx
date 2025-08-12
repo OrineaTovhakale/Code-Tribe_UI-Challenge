@@ -1,4 +1,4 @@
-import React from "react";
+
 import Navbar from "./Navbar";
 import heroImage from "./assets/image1.png";
 import CardSection from "./CardSection";
