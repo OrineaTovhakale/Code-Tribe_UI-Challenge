@@ -428,3 +428,8 @@
 .reusable-link:hover::after {
   width: 100%;
 }
+
+.hero img.hovered, .picture-section img.hovered {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}

@@ -30,6 +30,7 @@ const Navbar: React.FC = () => {
       <div className="navbar-right">
         <Icon IconComponent={FaSearch} className="icon" />
         <Icon IconComponent={FaPhone} className="icon phone-icon" />
+        <Icon IconComponent={FaSearch} className="icon" onClick={() => alert("Search functionality coming soon!")} />
         <button className="navbar-btn">Sign Up</button>
       </div>
 
