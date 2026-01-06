@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button.tsx"; 
 import "./CardSection.css";
+import { useState } from "react";
 
 interface CardProps {
   title: string;
@@ -19,6 +20,10 @@ const Card: React.FC<CardProps> = ({
   image,
   reverse,
 }) => {
+  const [isSelected, setIsSelected] = useState(false);
+
+  const handleClick = () => setIsSelected(!isSelected);
+
   return (
     <div className={`card ${reverse ? "reverse" : ""}`}>
       <div className="card-text">

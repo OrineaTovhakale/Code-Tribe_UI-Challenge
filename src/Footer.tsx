@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <p className="footer-tagline">Your Style, Your Story</p>
         <div className="footer-brand">Blonmmvlies"</div>
       </div>
-      // ... (rest of Footer.tsx remains the same)
+     
 <div className="footer-quick-links">
   <h3>Quick Links</h3>
   <ul>
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
     <li><Link href="#" text="Contact" className="footer-link" /></li>
   </ul>
 </div>
-// ...
+
       <div className="footer-paragraph">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
