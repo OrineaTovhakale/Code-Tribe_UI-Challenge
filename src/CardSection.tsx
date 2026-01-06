@@ -2,7 +2,7 @@ import React from "react";
 import "./CardSection.css";
 import img1 from "./assets/image2.png";
 import img2 from "./assets/image3.png";
-import Card from "./Card"; 
+import Card from "./Card.tsx"; 
 
 const CardSection: React.FC = () => {
   return (

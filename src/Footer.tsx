@@ -1,5 +1,6 @@
 import SocialIcons from "./SocialIcons.tsx";
 import "./App.css";
+import Link from "./Link.tsx";
 
 const Footer: React.FC = () => {
   return (
@@ -8,15 +9,17 @@ const Footer: React.FC = () => {
         <p className="footer-tagline">Your Style, Your Story</p>
         <div className="footer-brand">Blonmmvlies"</div>
       </div>
-      <div className="footer-quick-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
+      // ... (rest of Footer.tsx remains the same)
+<div className="footer-quick-links">
+  <h3>Quick Links</h3>
+  <ul>
+    <li><Link href="#" text="Home" className="footer-link" /></li> {/* Add class if you want footer-specific styles */}
+    <li><Link href="#" text="About" className="footer-link" /></li>
+    <li><Link href="#" text="Services" className="footer-link" /></li>
+    <li><Link href="#" text="Contact" className="footer-link" /></li>
+  </ul>
+</div>
+// ...
       <div className="footer-paragraph">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

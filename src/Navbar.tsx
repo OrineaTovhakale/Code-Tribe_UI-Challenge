@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaPhone, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import "./App.css";
+import Link from "./Link";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,12 +13,11 @@ const Navbar: React.FC = () => {
 
       
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-
-        
+        <li><Link href="#" text="Home" /></li>
+        <li><Link href="#" text="About" /></li>
+        <li><Link href="#" text="Services" /></li>
+        <li><Link href="#" text="Contact" /></li>
+                
         <div className="navbar-icons-mobile">
           <FaSearch className="icon" />
           <FaPhone className="icon phone-icon" />
