@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer-join">
         <h3>Join Our Culture</h3>
-        <button className="footer-btn">Subscribe</button>
+        <button className="footer-btn" onClick={() => alert("Subscribed! Thank you.")}>Subscribe</button>
       </div>
       <div className="footer-bottom">
         <div className="footer-copyright">© 2025 Blonmmvlies. All rights reserved.</div>
