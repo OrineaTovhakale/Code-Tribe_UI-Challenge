@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react"; // Ensure useState is imported
 import Button from "./Button.tsx"; 
 import "./CardSection.css";
-import { useState } from "react";
 
 interface CardProps {
   title: string;
@@ -20,12 +19,15 @@ const Card: React.FC<CardProps> = ({
   image,
   reverse,
 }) => {
-  const [isSelected, setIsSelected] = useState(false);
+  const [isSelected, setIsSelected] = useState(false); // State for selected
 
-  const handleClick = () => setIsSelected(!isSelected);
+  const handleClick = () => setIsSelected(!isSelected); // Handler (now used below)
 
   return (
-    <div className={`card ${reverse ? "reverse" : ""}`}>
+    <div 
+      className={`card ${reverse ? "reverse" : ""} ${isSelected ? "selected" : ""}`} 
+      onClick={handleClick} // This uses handleClick, fixing the error
+    >
       <div className="card-text">
         <h2>{title}</h2>
         <p>{paragraph}</p>
