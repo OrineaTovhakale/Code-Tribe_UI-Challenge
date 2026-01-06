@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaPhone, FaSearch, FaBars, FaTimes } from "react-icons/fa";
 import "./App.css";
 import Link from "./Link";
+import Icon from "./Icon";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,16 +20,16 @@ const Navbar: React.FC = () => {
         <li><Link href="#" text="Contact" /></li>
                 
         <div className="navbar-icons-mobile">
-          <FaSearch className="icon" />
-          <FaPhone className="icon phone-icon" />
+         <Icon IconComponent={FaSearch} className="icon" />
+         <Icon IconComponent={FaPhone} className="icon phone-icon" />
           <button className="navbar-btn">Sign Up</button>
         </div>
       </ul>
 
       
       <div className="navbar-right">
-        <FaSearch className="icon" />
-        <FaPhone className="icon phone-icon" />
+        <Icon IconComponent={FaSearch} className="icon" />
+        <Icon IconComponent={FaPhone} className="icon phone-icon" />
         <button className="navbar-btn">Sign Up</button>
       </div>
 
